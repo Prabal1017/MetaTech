@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D169859A2BDABEC9004AE019 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16985992BDABEC9004AE019 /* AccountSettingsViewController.swift */; };
-		D16D9F592BE28AED009D0051 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D9F582BE28AED009D0051 /* OnboardingViewController.swift */; };
-		D16D9F5B2BE28AF8009D0051 /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D9F5A2BE28AF8009D0051 /* RoomCaptureViewController.swift */; };
-		D16D9F5D2BE28B29009D0051 /* UnsupportedDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16D9F5C2BE28B29009D0051 /* UnsupportedDevice.storyboard */; };
 		D19823762BD9B04D00B50C95 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19823752BD9B04D00B50C95 /* MyCollectionViewCell.swift */; };
+		D1A61C3D2BE2B412001F8408 /* UnsupportedDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A61C3C2BE2B412001F8408 /* UnsupportedDevice.storyboard */; };
+		D1A61C3F2BE2B41F001F8408 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A61C3E2BE2B41F001F8408 /* OnboardingViewController.swift */; };
+		D1A61C412BE2B425001F8408 /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A61C402BE2B425001F8408 /* RoomCaptureViewController.swift */; };
 		D1AFC4562BDAE8EF00318713 /* ScansCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFC4542BDAE8EF00318713 /* ScansCollectionViewCell.swift */; };
 		D1AFC4572BDAE8EF00318713 /* ScansCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1AFC4552BDAE8EF00318713 /* ScansCollectionViewCell.xib */; };
 		D1BBA8042BCF27F5002F2A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBA8032BCF27F5002F2A66 /* AppDelegate.swift */; };
@@ -23,6 +23,7 @@
 		D1BBA81B2BCF27F6002F2A66 /* Dr_RndRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBA81A2BCF27F6002F2A66 /* Dr_RndRTests.swift */; };
 		D1BBA8252BCF27F6002F2A66 /* Dr_RndRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBA8242BCF27F6002F2A66 /* Dr_RndRUITests.swift */; };
 		D1BBA8272BCF27F6002F2A66 /* Dr_RndRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBA8262BCF27F6002F2A66 /* Dr_RndRUITestsLaunchTests.swift */; };
+		D1D5174D2BE38BD9004EE1C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5174C2BE38BD9004EE1C9 /* Model.swift */; };
 		D1F192612BDAE2560008B42A /* ScansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F192602BDAE2560008B42A /* ScansViewController.swift */; };
 		D1FF9E982BD2394F00C4CEB4 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FF9E972BD2394F00C4CEB4 /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,10 +47,10 @@
 
 /* Begin PBXFileReference section */
 		D16985992BDABEC9004AE019 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
-		D16D9F582BE28AED009D0051 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		D16D9F5A2BE28AF8009D0051 /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
-		D16D9F5C2BE28B29009D0051 /* UnsupportedDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UnsupportedDevice.storyboard; sourceTree = "<group>"; };
 		D19823752BD9B04D00B50C95 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D1A61C3C2BE2B412001F8408 /* UnsupportedDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UnsupportedDevice.storyboard; sourceTree = "<group>"; };
+		D1A61C3E2BE2B41F001F8408 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		D1A61C402BE2B425001F8408 /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
 		D1AFC4542BDAE8EF00318713 /* ScansCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1AFC4552BDAE8EF00318713 /* ScansCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScansCollectionViewCell.xib; sourceTree = "<group>"; };
 		D1BBA8002BCF27F5002F2A66 /* Dr RndR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dr RndR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +66,7 @@
 		D1BBA8202BCF27F6002F2A66 /* Dr RndRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dr RndRUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BBA8242BCF27F6002F2A66 /* Dr_RndRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dr_RndRUITests.swift; sourceTree = "<group>"; };
 		D1BBA8262BCF27F6002F2A66 /* Dr_RndRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dr_RndRUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1D5174C2BE38BD9004EE1C9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1F192602BDAE2560008B42A /* ScansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansViewController.swift; sourceTree = "<group>"; };
 		D1FF9E972BD2394F00C4CEB4 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = "Dr RndR/ProfileTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -119,7 +121,6 @@
 			children = (
 				D1BBA8032BCF27F5002F2A66 /* AppDelegate.swift */,
 				D1BBA8052BCF27F5002F2A66 /* SceneDelegate.swift */,
-				D1FE5B5E2BCF2A5400CCDDED /* Model */,
 				D1FE5B5C2BCF2A3E00CCDDED /* View */,
 				D1FE5B5D2BCF2A4700CCDDED /* Controllers */,
 				D1BBA80C2BCF27F6002F2A66 /* Assets.xcassets */,
@@ -151,7 +152,7 @@
 				D1BBA8092BCF27F5002F2A66 /* Main.storyboard */,
 				D1AFC4552BDAE8EF00318713 /* ScansCollectionViewCell.xib */,
 				D1BBA80E2BCF27F6002F2A66 /* LaunchScreen.storyboard */,
-				D16D9F5C2BE28B29009D0051 /* UnsupportedDevice.storyboard */,
+				D1A61C3C2BE2B412001F8408 /* UnsupportedDevice.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,17 +166,11 @@
 				D16985992BDABEC9004AE019 /* AccountSettingsViewController.swift */,
 				D1F192602BDAE2560008B42A /* ScansViewController.swift */,
 				D1AFC4542BDAE8EF00318713 /* ScansCollectionViewCell.swift */,
-				D16D9F5A2BE28AF8009D0051 /* RoomCaptureViewController.swift */,
-				D16D9F582BE28AED009D0051 /* OnboardingViewController.swift */,
+				D1A61C3E2BE2B41F001F8408 /* OnboardingViewController.swift */,
+				D1A61C402BE2B425001F8408 /* RoomCaptureViewController.swift */,
+				D1D5174C2BE38BD9004EE1C9 /* Model.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D1FE5B5E2BCF2A5400CCDDED /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D16D9F5D2BE28B29009D0051 /* UnsupportedDevice.storyboard in Resources */,
+				D1A61C3D2BE2B412001F8408 /* UnsupportedDevice.storyboard in Resources */,
 				D1BBA80D2BCF27F6002F2A66 /* Assets.xcassets in Resources */,
 				D1BBA8102BCF27F6002F2A66 /* Base in Resources */,
 				D1BBA80B2BCF27F5002F2A66 /* Base in Resources */,
@@ -315,11 +310,12 @@
 				D1F192612BDAE2560008B42A /* ScansViewController.swift in Sources */,
 				D19823762BD9B04D00B50C95 /* MyCollectionViewCell.swift in Sources */,
 				D1FF9E982BD2394F00C4CEB4 /* ProfileTableViewController.swift in Sources */,
-				D16D9F5B2BE28AF8009D0051 /* RoomCaptureViewController.swift in Sources */,
+				D1A61C412BE2B425001F8408 /* RoomCaptureViewController.swift in Sources */,
 				D1BBA8042BCF27F5002F2A66 /* AppDelegate.swift in Sources */,
 				D1BBA8062BCF27F5002F2A66 /* SceneDelegate.swift in Sources */,
 				D169859A2BDABEC9004AE019 /* AccountSettingsViewController.swift in Sources */,
-				D16D9F592BE28AED009D0051 /* OnboardingViewController.swift in Sources */,
+				D1D5174D2BE38BD9004EE1C9 /* Model.swift in Sources */,
+				D1A61C3F2BE2B41F001F8408 /* OnboardingViewController.swift in Sources */,
 				D1AFC4562BDAE8EF00318713 /* ScansCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

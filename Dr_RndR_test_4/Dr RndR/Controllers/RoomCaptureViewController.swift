@@ -8,9 +8,11 @@ The sample app's main view controller that manages the scanning process.
 import UIKit
 import RoomPlan
 
+
 class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, RoomCaptureSessionDelegate {
     
     @IBOutlet var exportButton: UIButton?
+    @IBOutlet weak var saveButton: UIButton?
     
     @IBOutlet var doneButton: UIBarButtonItem?
     @IBOutlet var cancelButton: UIBarButtonItem?
@@ -20,7 +22,7 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     
     private var roomCaptureView: RoomCaptureView!
     private var roomCaptureSessionConfig: RoomCaptureSession.Configuration = RoomCaptureSession.Configuration()
-    
+  
     private var finalResults: CapturedRoom?
     
     override func viewDidLoad() {
@@ -72,15 +74,17 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     func captureView(didPresent processedResult: CapturedRoom, error: Error?) {
         finalResults = processedResult
         self.exportButton?.isEnabled = true
+        self.saveButton?.isEnabled = true
         self.activityIndicator?.stopAnimating()
     }
     
     @IBAction func doneScanning(_ sender: UIBarButtonItem) {
         if isScanning { stopSession() } else { cancelScanning(sender) }
         self.exportButton?.isEnabled = false
+        self.saveButton?.isEnabled = false
         self.activityIndicator?.startAnimating()
     }
-
+    
     @IBAction func cancelScanning(_ sender: UIBarButtonItem) {
         navigationController?.dismiss(animated: true)
     }
@@ -111,6 +115,48 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         }
     }
     
+    @IBAction func saveResults(_ sender: UIButton) {
+        
+        let destinationFolderURL = FileManager.default.temporaryDirectory.appending(path: "Export")
+        let destinationURL = destinationFolderURL.appending(path: "Room.usdz")
+        let capturedRoomURL = destinationFolderURL.appending(path: "Room.json")
+        
+        do {
+            try FileManager.default.createDirectory(at: destinationFolderURL, withIntermediateDirectories: true)
+            let jsonEncoder = JSONEncoder()
+            let jsonData = try jsonEncoder.encode(finalResults)
+            try jsonData.write(to: capturedRoomURL)
+            // try finalResults?.export(to: destinationURL, exportOptions: .parametric)
+        } catch {
+            print("Error = \(error)")
+        }
+            
+            
+        print(destinationFolderURL)
+        
+//        let decoder = JSONDecoder()
+//        let product = try decoder.decode(<#T##type: Decodable.Type##Decodable.Type#>, from: <#T##Data#>)
+//        
+        do {
+            let dataJson = try Data(contentsOf: destinationURL)
+            let decoder = JSONDecoder()
+            let data = try decoder.decode(CapturedRoom.self, from: dataJson)
+        } catch {
+            print("Error decoding JSON: \(error)")
+        }
+        
+//        let jsonDecoder = JSONDecoder()
+//        if let retrivedData = try? Data(contentsOf: capturedRoomURL),
+//           jsonDecoder.decode(<#T##type: Decodable.Type##Decodable.Type#>, from: <#T##Data#>)
+//
+
+
+
+    }
+    
+        
+    
+    
     private func setActiveNavBar() {
         UIView.animate(withDuration: 1.0, animations: {
             self.cancelButton?.tintColor = .white
@@ -119,6 +165,7 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         }, completion: { complete in
             self.exportButton?.isHidden = true
         })
+        
     }
     
     private func setCompleteNavBar() {
@@ -127,7 +174,16 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
             self.cancelButton?.tintColor = .systemBlue
             self.doneButton?.tintColor = .systemBlue
             self.exportButton?.alpha = 1.0
+            
+            self.saveButton?.isHidden = false
+            UIView.animate(withDuration: 1.0) {
+                self.cancelButton?.tintColor = .systemBlue
+                self.doneButton?.tintColor = .systemBlue
+                self.saveButton?.alpha = 1.0
+                
+                
+            }
         }
     }
+    
 }
-
